@@ -15,6 +15,7 @@ let handler = async function (m, { text, isPrems, isOwner }) {
   if (!isLimit) this.sendFile(m.chat, url, 'audio.mp3', `
 *Title:* ${judul}
 *Filesize:* ${size}
+_Mohon tunggu beberapa menit dan jangan spam_
 `.trim(), m)
 }
 handler.help = ['play <pencarian>']
