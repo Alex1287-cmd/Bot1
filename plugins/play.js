@@ -10,13 +10,11 @@ let handler = async function (m, { text, isPrems, isOwner }) {
   this.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `
 *Title:* ${judul}
 *Filesize:* ${size}
-*${isLimit ? 'Pakai ': ''}Link:* ${url}
-*_Mohon_tunggu_beberapa_menit_media_sedang_di_kirim_...* 
+*${isLimit ? 'Pakai ': ''}Link:* ${url} 
 `.trim(), m)
   if (!isLimit) this.sendFile(m.chat, url, 'audio.mp3', `
 *Title:* ${judul}
 *Filesize:* ${size}
-*_Mohon tunggu beberapa menit dan jangan spam_*
 `.trim(), m)
 }
 handler.help = ['play <pencarian>']
