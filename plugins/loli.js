@@ -1,7 +1,6 @@
 var items = ["anime loli","anime loli sange","anime loli fackgirll","anime loli i love you"];
-    var nime = items[Math.floor(Math.random() * items.length)];
-    var url = "https://api.fdci.se/rep.php?gambar=" + nime;
-    
+var nime = items[Math.floor(Math.random() * items.length)];
+var url = "https://api.fdci.se/rep.php?gambar=" + nime;
     axios.get(url)
       .then((result) => {
         var n = JSON.parse(JSON.stringify(result.data));
